@@ -20,30 +20,9 @@
         </style>
     </head>
     <body>
-        <?php
-            $filepath = "test.txt";
-            if(filesize($filepath) == 0){
-                $content = fopen($filepath,"w");
-                fputs($content,"0\n<br>");
-                fclose($content);
-            }
-            else if(!file_exists($filepath)){
-                $content = fopen($filepath,"w");
-                fputs($content,"0\n<br>");
-                fclose($content);
-            }
-            else{
-                $content = file($filepath);
-                $num = (int)$content[0];
-                $num++;
-                $toWrite = fopen($filepath,"w");
-                fputs($toWrite,"$num<br>\n");
-                fclose($toWrite);
-            }
-        ?>
         <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
             <div class="picture text-center col-xs-12 col-md-12 col-sm-12 col-lg-12">
-                <img src="ihateyou.jpg" alt="Anakin Skywalker" id="annie">
+                <img src="./ihateyou.jpg" alt="Anakin Skywalker" id="annie">
             </div>
             <div class="anakinhatbutton text-center col-xs-12 col-md-12 col-sm-12 col-lg-12">
                 <button type="button" id="hate"><h1>Click Me!</h1></button>
