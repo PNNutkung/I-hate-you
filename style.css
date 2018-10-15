@@ -1,0 +1,10 @@
+.picture, .anakinhatbutton, .footertext{
+    padding: 30px;
+}
+#annie{
+    width: 65%;
+    height: auto;
+}
+p.footertext {
+    font-size:11px;
+}

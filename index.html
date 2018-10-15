@@ -4,20 +4,9 @@
         <meta charset="utf-8">
         <title>Instant "I hate you" button! Star Wars funnies FTW!</title>
         <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
         <script src="jquery-2.1.4.min.js"></script>
         <script src="jquery.playSound.js"></script>
-        <style>
-            .picture, .anakinhatbutton, .footertext{
-                padding: 30px;
-            }
-            #annie{
-                width: 65%;
-                height: auto;
-            }
-            p.footertext {
-	            font-size:11px;
-	        }
-        </style>
     </head>
     <body>
         <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
@@ -25,7 +14,7 @@
                 <img src="./ihateyou.jpg" alt="Anakin Skywalker" id="annie">
             </div>
             <div class="anakinhatbutton text-center col-xs-12 col-md-12 col-sm-12 col-lg-12">
-                <button type="button" id="hate"><h1>Click Me!</h1></button>
+                <button type="button" id="hate" class="btn-danger"><h1>Click Me!</h1></button>
                 <audio id="hateyou" src="ihateyou.mp3" preload="auto"></audio>
                 <a href="javascript:play_single_sound();"></a>
                 <script type="text/javascript">
