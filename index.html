@@ -16,22 +16,7 @@
             <div class="anakinhatbutton text-center col-xs-12 col-md-12 col-sm-12 col-lg-12">
                 <button type="button" id="hate" class="btn-danger"><h1>Click Me!</h1></button>
                 <audio id="hateyou" src="ihateyou.mp3" preload="auto"></audio>
-                <a href="javascript:play_single_sound();"></a>
-                <script type="text/javascript">
-                    var playing = false;
-                    $('#hateyou').on('playing', function() {
-                       playing = true;
-                    });
-                    $('#hateyou').on('ended', function() {
-                       playing = false;
-                    });
-                    function play_single_sound() {
-                        if(!playing) {
-                            document.getElementById('hateyou').play();
-                        }
-                    }
-                    $( "#hate" ).click( play_single_sound )
-                </script>
+                <a href="javascript:play_hate_you();"></a>
             </div>
             <div class="picture text-center col-xs-12 col-md-12 col-sm-12 col-lg-12">
                 <img src="./ihatesand.jpg" alt="Anakin Skywalker" id="annie">
@@ -39,22 +24,8 @@
             <div class="anakinhatbutton text-center col-xs-12 col-md-12 col-sm-12 col-lg-12">
                 <button type="button" id="hate_sand_btn" class="btn-danger"><h1>Click Me!</h1></button>
                 <audio id="hatesand" src="ihatesand.mp3" preload="auto"></audio>
-                <a href="javascript:play_single_sound();"></a>
-                <script type="text/javascript">
-                    var playing = false;
-                    $('#hatesand').on('playing', function() {
-                       playing = true;
-                    });
-                    $('#hatesand').on('ended', function() {
-                       playing = false;
-                    });
-                    function play_single_sound() {
-                        if(!playing) {
-                            document.getElementById('hatesand').play();
-                        }
-                    }
-                    $( "#hate_sand_btn" ).click( play_single_sound )
-                </script>
+                <a href="javascript:play_hate_sand();"></a>
+                
             </div>
             <p class="footertext text-center">
                 Created by PNNutkung<br />
@@ -64,3 +35,31 @@
         </div>
     </body>
 </html>
+<script type="text/javascript">
+    var playing = false;
+    $('#hatesand').on('playing', function() {
+        playing = true;
+    });
+    $('#hatesand').on('ended', function() {
+        playing = false;
+    });
+    function play_hate_sand() {
+        if(!playing) {
+            document.getElementById('hatesand').play();
+        }
+    }
+    $( "#hate_sand_btn" ).click( play_hate_sand )
+    var playing = false;
+    $('#hateyou').on('playing', function() {
+        playing = true;
+    });
+    $('#hateyou').on('ended', function() {
+        playing = false;
+    });
+    function play_hate_you() {
+        if(!playing) {
+            document.getElementById('hateyou').play();
+        }
+    }
+    $( "#hate" ).click( play_hate_you )
+</script>
